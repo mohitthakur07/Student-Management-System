@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1><i class="fa-solid fa-user"></i>Student Management System</h1>
+      <div class="input-container">
+        <form>
+          <input type="text" placeholder="Name" id="name" required />
+          <input type="email" placeholder="Email" id="email" required />
+          <input type="text" placeholder="GPA" id="grade" required />
+          <input type="number" placeholder="Age" id="age" required />
+          <input type="text" placeholder="Degree" id="degree" required />
+          <br>
+          <button
+            class="button"
+            type="submit"
+            id="submit"
+            onclick="addStudent()"
+          >
+            Add Student
+          </button>
+        </form>
+      </div>
+      <input
+        class="search"
+        type="text"
+        id="search"
+        onkeyup="search()"
+        placeholder="Search By Name, email or Degree"
+      />
+
+      <table class="table" id="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>GPA</th>
+            <th>Degree</th>
+          </tr>
+        </thead>
+
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
